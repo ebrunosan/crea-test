@@ -13,22 +13,18 @@ const staticFiles = express.static(path.join(__dirname, '../../client/build'));
 app.use(staticFiles);
 
 // now we can set the route path & initialize the API
-router.get('/', (req, res) => {
-  res.json({ message: 'Hello, World!' });
-});
-
-// Use our router configuration when we call /api
-app.use('/api', router);
-
-router.get('/cities', (req, res) => {
+router.get('/cidades', (req, res) => {
   const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598}
+    {name: 'Sao Paulo',      population: 22000000},
+    {name: 'Rio de Janeiro', population: 8000000},
+    {name: 'Curitiba',       population: 3000000}
   ];
 
   res.json(cities);
 });
+
+// Use our router configuration when we call /api
+app.use('/api', router);
 
 app.use(router);
 
