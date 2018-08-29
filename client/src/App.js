@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+
 class App extends Component {
-  state = {cities: []}
+  state = { cities: [] };
+
   async componentDidMount() {
-    const response = await fetch('/cities')
-    const cities   = await response.json()
-    this.setState({cities: cities})
+    const response = await fetch('/cities');
+    const cities   = await response.json();
+    this.setState({cities: cities});
   }
+
   render() {
     return (
       <div>
@@ -18,5 +21,6 @@ class App extends Component {
       </div>
     );
   }
-}
+};
+
 export default App;
