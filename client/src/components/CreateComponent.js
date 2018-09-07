@@ -15,12 +15,12 @@ export default class CreateComponent extends Component {
     }
     onChangeFirstName(e) {
         this.setState({
-            name: e.target.value
+            fName: e.target.value
         });
     }
     onChangeLastName(e) {
         this.setState({
-            port: e.target.value
+            lName: e.target.value
         });
     }
     onSubmit(e) {
@@ -36,7 +36,7 @@ export default class CreateComponent extends Component {
         return (
             <div style={{marginTop: 50}}>
                 <h3>Add New User</h3>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>First Name:  </label>
                         <input type="text" value={this.state.fName} className="form-control" onChange={this.onChangeFirstName}/>

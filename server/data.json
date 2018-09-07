@@ -1,0 +1,14 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "fName": "First1",
+        "lName": "Last1"
+      },
+      {
+        "id": 2,
+        "fName": "First2",
+        "lName": "Last2"
+      }
+    ]
+  }
